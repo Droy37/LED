@@ -28,13 +28,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 64,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 60,
+				"line" : 65,
 				"parent" : 0
 			},
 			{
@@ -47,6 +41,12 @@
 				"command" : 1,
 				"file" : 0,
 				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 63,
 				"parent" : 0
 			},
 			{
@@ -190,7 +190,7 @@
 				18,
 				19,
 				20,
-				86,
+				21,
 				87,
 				88,
 				89,
@@ -204,7 +204,8 @@
 				97,
 				98,
 				99,
-				100
+				100,
+				101
 			]
 		},
 		{
@@ -299,7 +300,7 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				21
+				22
 			]
 		}
 	],
@@ -345,6 +346,11 @@
 				"backtrace" : 4,
 				"fragment" : "C:/CLionProjects/test2/STM32F427IIHX_FLASH.ld",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "Core/Src/callback.c",
+				"role" : "flags"
 			}
 		],
 		"language" : "C"
@@ -368,10 +374,9 @@
 				3,
 				4,
 				5,
-				22,
 				23,
 				24,
-				26,
+				25,
 				27,
 				28,
 				29,
@@ -401,7 +406,7 @@
 				53,
 				54,
 				55,
-				57,
+				56,
 				58,
 				59,
 				60,
@@ -428,7 +433,8 @@
 				81,
 				82,
 				83,
-				84
+				84,
+				85
 			]
 		},
 		{
@@ -441,11 +447,11 @@
 				9,
 				10,
 				11,
-				21,
-				25,
-				56,
-				85,
-				101
+				22,
+				26,
+				57,
+				86,
+				102
 			]
 		},
 		{
@@ -461,7 +467,7 @@
 				18,
 				19,
 				20,
-				86,
+				21,
 				87,
 				88,
 				89,
@@ -475,7 +481,8 @@
 				97,
 				98,
 				99,
-				100
+				100,
+				101
 			]
 		}
 	],
@@ -540,6 +547,12 @@
 			"backtrace" : 1,
 			"path" : "Core/Src/.idea/workspace.xml",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/callback.c",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,

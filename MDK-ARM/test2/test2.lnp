@@ -6,6 +6,7 @@
 "test2\tim.o"
 "test2\stm32f4xx_it.o"
 "test2\stm32f4xx_hal_msp.o"
+"test2\callback.o"
 "test2\stm32f4xx_hal_tim.o"
 "test2\stm32f4xx_hal_tim_ex.o"
 "test2\stm32f4xx_hal_rcc.o"
