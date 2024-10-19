@@ -71,6 +71,9 @@ Discarded input sections
  .ARM.exidx     0x00000000       0x10 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .ARM.attributes
                 0x00000000       0x1c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .text          0x00000000        0x0 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+ .data          0x00000000        0x0 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
  .text          0x00000000        0x0 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
  .data          0x00000000        0x0 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
  .bss           0x00000000        0x0 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
@@ -1353,6 +1356,7 @@ Linker script and memory map
 LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp/crti.o
 LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp/crtbegin.o
 LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+LOAD CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
 LOAD CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
 LOAD CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
 LOAD CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
@@ -1408,15 +1412,15 @@ LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x080004d8                __aeabi_idiv0
                 0x080004d8                __aeabi_ldiv0
  *(.text*)
- .text.MX_DMA_Init
-                0x080004dc       0x34 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
-                0x080004dc                MX_DMA_Init
- .text.MX_GPIO_Init
-                0x08000510       0x94 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
-                0x08000510                MX_GPIO_Init
  .text.HAL_TIM_PeriodElapsedCallback
-                0x080005a4       0x24 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
-                0x080005a4                HAL_TIM_PeriodElapsedCallback
+                0x080004dc       0x24 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+                0x080004dc                HAL_TIM_PeriodElapsedCallback
+ .text.MX_DMA_Init
+                0x08000500       0x34 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+                0x08000500                MX_DMA_Init
+ .text.MX_GPIO_Init
+                0x08000534       0x94 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+                0x08000534                MX_GPIO_Init
  .text.Error_Handler
                 0x080005c8        0x4 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
                 0x080005c8                Error_Handler
@@ -1905,340 +1909,123 @@ LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .ARM.attributes
                 0x0000001e       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp/crtbegin.o
  .ARM.attributes
-                0x0000004c       0x2e CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+                0x0000004c       0x2e CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
  .ARM.attributes
-                0x0000007a       0x2e CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+                0x0000007a       0x2e CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
  .ARM.attributes
-                0x000000a8       0x2e CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+                0x000000a8       0x2e CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
  .ARM.attributes
-                0x000000d6       0x2e CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x000000d6       0x2e CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
  .ARM.attributes
-                0x00000104       0x2e CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x00000104       0x2e CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .ARM.attributes
-                0x00000132       0x2e CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x00000132       0x2e CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
  .ARM.attributes
-                0x00000160       0x2e CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+                0x00000160       0x2e CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
  .ARM.attributes
-                0x0000018e       0x21 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
+                0x0000018e       0x2e CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
  .ARM.attributes
-                0x000001af       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x000001bc       0x21 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
  .ARM.attributes
-                0x000001dd       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x000001dd       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .ARM.attributes
-                0x0000020b       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x0000020b       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .ARM.attributes
-                0x00000239       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x00000239       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .ARM.attributes
-                0x00000267       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+                0x00000267       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
  .ARM.attributes
-                0x00000295       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x00000295       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
  .ARM.attributes
-                0x000002c3       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x000002c3       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
  .ARM.attributes
-                0x000002f1       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x000002f1       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .ARM.attributes
-                0x0000031f       0x1e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+                0x0000031f       0x2e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
  .ARM.attributes
-                0x0000033d       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x0000034d       0x1e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x0000036b       0x1e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x0000036b       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x00000389       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+                0x00000399       0x1e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x000003b7       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+                0x000003b7       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
  .ARM.attributes
-                0x000003e5       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+                0x000003e5       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
  .ARM.attributes
-                0x00000413       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+                0x00000413       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
  .ARM.attributes
-                0x00000441       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+                0x00000441       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
  .ARM.attributes
-                0x0000046f       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+                0x0000046f       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
  .ARM.attributes
-                0x0000049d       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+                0x0000049d       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
  .ARM.attributes
-                0x000004cb       0x1e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp/crtn.o
+                0x000004cb       0x2e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+ .ARM.attributes
+                0x000004f9       0x1e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp/crtn.o
 OUTPUT(test2.elf elf32-littlearm)
 LOAD linker stubs
 LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a
 LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a
 LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a
 
-.debug_info     0x00000000     0xd6d2
- .debug_info    0x00000000      0x51b CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
- .debug_info    0x0000051b      0x458 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
- .debug_info    0x00000973      0xcfe CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00001671      0x27d CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_info    0x000018ee      0x799 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_info    0x00002087      0x34c CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_info    0x000023d3     0x12b2 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
- .debug_info    0x00003685       0x30 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
- .debug_info    0x000036b5      0xa4c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_info    0x00004101      0xfe5 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_info    0x000050e6      0xad9 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_info    0x00005bbf      0x71c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_info    0x000062db      0x78a CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_info    0x00006a65      0xa85 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_info    0x000074ea     0x3be0 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_info    0x0000b0ca     0x1ac8 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_info    0x0000cb92       0xe0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
- .debug_info    0x0000cc72      0x10b C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
- .debug_info    0x0000cd7d      0x20a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
- .debug_info    0x0000cf87      0x2dd C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
- .debug_info    0x0000d264      0x118 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
- .debug_info    0x0000d37c       0xf7 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
- .debug_info    0x0000d473      0x25f C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+.debug_info     0x00000000     0xdcf6
+ .debug_info    0x00000000      0x73e CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+ .debug_info    0x0000073e      0x51b CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+ .debug_info    0x00000c59      0x458 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+ .debug_info    0x000010b1      0xbe4 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x00001c95      0x27d CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_info    0x00001f12      0x799 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_info    0x000026ab      0x34c CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_info    0x000029f7     0x12b2 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+ .debug_info    0x00003ca9       0x30 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
+ .debug_info    0x00003cd9      0xa4c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_info    0x00004725      0xfe5 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_info    0x0000570a      0xad9 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_info    0x000061e3      0x71c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_info    0x000068ff      0x78a CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_info    0x00007089      0xa85 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_info    0x00007b0e     0x3be0 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_info    0x0000b6ee     0x1ac8 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_info    0x0000d1b6       0xe0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+ .debug_info    0x0000d296      0x10b C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+ .debug_info    0x0000d3a1      0x20a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+ .debug_info    0x0000d5ab      0x2dd C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+ .debug_info    0x0000d888      0x118 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+ .debug_info    0x0000d9a0       0xf7 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+ .debug_info    0x0000da97      0x25f C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
 
-.debug_abbrev   0x00000000     0x26d9
- .debug_abbrev  0x00000000      0x12b CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
- .debug_abbrev  0x0000012b      0x164 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
- .debug_abbrev  0x0000028f      0x265 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
- .debug_abbrev  0x000004f4       0xd6 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_abbrev  0x000005ca      0x1b8 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_abbrev  0x00000782      0x120 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_abbrev  0x000008a2      0x255 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
- .debug_abbrev  0x00000af7       0x24 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
- .debug_abbrev  0x00000b1b      0x240 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_abbrev  0x00000d5b      0x391 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_abbrev  0x000010ec      0x2c0 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_abbrev  0x000013ac      0x202 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_abbrev  0x000015ae      0x1e6 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_abbrev  0x00001794      0x2c7 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_abbrev  0x00001a5b      0x271 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_abbrev  0x00001ccc      0x26f CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_abbrev  0x00001f3b       0x9e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
- .debug_abbrev  0x00001fd9       0xc9 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
- .debug_abbrev  0x000020a2      0x115 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
- .debug_abbrev  0x000021b7      0x20c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
- .debug_abbrev  0x000023c3       0xc1 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
- .debug_abbrev  0x00002484       0xcc C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
- .debug_abbrev  0x00002550      0x189 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
-
-.debug_aranges  0x00000000      0xbe0
- .debug_aranges
-                0x00000000       0x20 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
- .debug_aranges
-                0x00000020       0x20 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
- .debug_aranges
-                0x00000040       0x38 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
- .debug_aranges
-                0x00000078       0x20 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_aranges
-                0x00000098       0x88 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_aranges
-                0x00000120       0x28 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_aranges
-                0x00000148       0x40 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
- .debug_aranges
-                0x00000188       0x28 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
- .debug_aranges
-                0x000001b0      0x100 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_aranges
-                0x000002b0       0xf8 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_aranges
-                0x000003a8       0x90 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_aranges
-                0x00000438       0x58 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_aranges
-                0x00000490       0x60 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_aranges
-                0x000004f0       0x88 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_aranges
-                0x00000578      0x3d0 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_aranges
-                0x00000948      0x168 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_aranges
-                0x00000ab0       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
- .debug_aranges
-                0x00000ad0       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
- .debug_aranges
-                0x00000af0       0x68 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
- .debug_aranges
-                0x00000b58       0x28 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
- .debug_aranges
-                0x00000b80       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
- .debug_aranges
-                0x00000ba0       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
- .debug_aranges
-                0x00000bc0       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
-
-.debug_rnglists
-                0x00000000      0x8e5
- .debug_rnglists
-                0x00000000       0x13 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
- .debug_rnglists
-                0x00000013       0x14 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
- .debug_rnglists
-                0x00000027       0x26 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
- .debug_rnglists
-                0x0000004d       0x13 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_rnglists
-                0x00000060       0x61 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_rnglists
-                0x000000c1       0x1a CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_rnglists
-                0x000000db       0x2d CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
- .debug_rnglists
-                0x00000108       0x19 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
- .debug_rnglists
-                0x00000121       0xbb CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_rnglists
-                0x000001dc       0xb5 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_rnglists
-                0x00000291       0x6c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_rnglists
-                0x000002fd       0x3f CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_rnglists
-                0x0000033c       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_rnglists
-                0x00000380       0x75 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_rnglists
-                0x000003f5      0x302 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_rnglists
-                0x000006f7      0x11b CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_rnglists
-                0x00000812       0x13 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
- .debug_rnglists
-                0x00000825       0x13 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
- .debug_rnglists
-                0x00000838       0x49 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
- .debug_rnglists
-                0x00000881       0x2a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
- .debug_rnglists
-                0x000008ab       0x13 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
- .debug_rnglists
-                0x000008be       0x13 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
- .debug_rnglists
-                0x000008d1       0x14 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
-
-.debug_line     0x00000000     0xc263
- .debug_line    0x00000000      0x21e CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
- .debug_line    0x0000021e      0x257 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
- .debug_line    0x00000475      0x47f CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
- .debug_line    0x000008f4      0x1df CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x00000ad3      0x3d0 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x00000ea3      0x2a7 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_line    0x0000114a      0x5c8 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
- .debug_line    0x00001712       0x7a CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
- .debug_line    0x0000178c      0x655 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_line    0x00001de1      0x90a CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_line    0x000026eb      0xefa CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_line    0x000035e5      0x772 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_line    0x00003d57      0x556 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_line    0x000042ad      0xbdb CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_line    0x00004e88     0x4b18 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_line    0x000099a0     0x1db1 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_line    0x0000b751      0x17e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
- .debug_line    0x0000b8cf      0x188 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
- .debug_line    0x0000ba57      0x19b C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
- .debug_line    0x0000bbf2      0x28a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
- .debug_line    0x0000be7c      0x102 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
- .debug_line    0x0000bf7e      0x140 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
- .debug_line    0x0000c0be      0x1a5 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
-
-.debug_str      0x00000000     0x3eaf
- .debug_str     0x00000000      0x807 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
-                                0x849 (size before relaxing)
- .debug_str     0x00000807       0xf1 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
-                                0x3a9 (size before relaxing)
- .debug_str     0x000008f8      0x753 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
-                                0xad1 (size before relaxing)
- .debug_str     0x0000104b       0x40 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                                0x2ea (size before relaxing)
- .debug_str     0x0000108b      0x17a CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                                0x83b (size before relaxing)
- .debug_str     0x00001205       0x9b CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                                0x350 (size before relaxing)
- .debug_str     0x000012a0      0x2e0 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
-                               0x115a (size before relaxing)
- .debug_str     0x00001580       0x58 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
-                                 0x8d (size before relaxing)
- .debug_str     0x000015d8      0x39e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                                0xc1b (size before relaxing)
- .debug_str     0x00001976      0x4d8 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                                0xcde (size before relaxing)
- .debug_str     0x00001e4e      0x301 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                                0x792 (size before relaxing)
- .debug_str     0x0000214f      0x12b CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                                0x50f (size before relaxing)
- .debug_str     0x0000227a      0x152 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
-                                0x4fa (size before relaxing)
- .debug_str     0x000023cc      0x1b8 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                                0x735 (size before relaxing)
- .debug_str     0x00002584      0xdcd CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                               0x171b (size before relaxing)
- .debug_str     0x00003351      0x450 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                                0xf27 (size before relaxing)
- .debug_str     0x000037a1      0x16a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
-                                0x206 (size before relaxing)
- .debug_str     0x0000390b       0xb6 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
-                                0x267 (size before relaxing)
- .debug_str     0x000039c1      0x266 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
-                                0x379 (size before relaxing)
- .debug_str     0x00003c27      0x105 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
-                                0x343 (size before relaxing)
- .debug_str     0x00003d2c       0x9e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
-                                0x243 (size before relaxing)
- .debug_str     0x00003dca       0x7a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
-                                0x23d (size before relaxing)
- .debug_str     0x00003e44       0x6b C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
-                                0x31a (size before relaxing)
-
-.comment        0x00000000       0x43
- .comment       0x00000000       0x43 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
-                                 0x44 (size before relaxing)
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
- .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
- .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
- .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
- .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
- .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
- .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
-
-.debug_frame    0x00000000     0x1d18
- .debug_frame   0x00000000       0x2c CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
- .debug_frame   0x0000002c       0x30 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
- .debug_frame   0x0000005c       0x70 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
- .debug_frame   0x000000cc       0x28 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_frame   0x000000f4      0x120 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_frame   0x00000214       0x30 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_frame   0x00000244       0xac CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
- .debug_frame   0x000002f0      0x20c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_frame   0x000004fc      0x214 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_frame   0x00000710      0x188 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_frame   0x00000898       0xd4 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_frame   0x0000096c       0xec CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_frame   0x00000a58      0x16c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_frame   0x00000bc4      0xb08 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_frame   0x000016cc      0x40c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_frame   0x00001ad8       0x2c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00001b04       0x34 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00001b38       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
- .debug_frame   0x00001b58       0x2c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
- .debug_frame   0x00001b84       0xb0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
- .debug_frame   0x00001c34       0x58 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
- .debug_frame   0x00001c8c       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
- .debug_frame   0x00001cac       0x38 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
- .debug_frame   0x00001ce4       0x34 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+.debug_abbrev   0x00000000     0x2838
+ .debug_abbrev  0x00000000      0x188 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+ .debug_abbrev  0x00000188      0x12b CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+ .debug_abbrev  0x000002b3      0x164 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+ .debug_abbrev  0x00000417      0x23c CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x00000653       0xd6 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_abbrev  0x00000729      0x1b8 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_abbrev  0x000008e1      0x120 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_abbrev  0x00000a01      0x255 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+ .debug_abbrev  0x00000c56       0x24 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
+ .debug_abbrev  0x00000c7a      0x240 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_abbrev  0x00000eba      0x391 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_abbrev  0x0000124b      0x2c0 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_abbrev  0x0000150b      0x202 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_abbrev  0x0000170d      0x1e6 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_abbrev  0x000018f3      0x2c7 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_abbrev  0x00001bba      0x271 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_abbrev  0x00001e2b      0x26f CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_abbrev  0x0000209a       0x9e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+ .debug_abbrev  0x00002138       0xc9 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+ .debug_abbrev  0x00002201      0x115 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+ .debug_abbrev  0x00002316      0x20c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+ .debug_abbrev  0x00002522       0xc1 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+ .debug_abbrev  0x000025e3       0xcc C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+ .debug_abbrev  0x000026af      0x189 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
 
 .debug_loclists
                 0x00000000     0x5ea5
  .debug_loclists
-                0x00000000       0x34 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+                0x00000000       0x34 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
  .debug_loclists
                 0x00000034       0xdb CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
  .debug_loclists
@@ -2273,6 +2060,236 @@ LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x00005ddc       0x3b C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
  .debug_loclists
                 0x00005e17       0x8e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+
+.debug_aranges  0x00000000      0xbf8
+ .debug_aranges
+                0x00000000       0x20 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+ .debug_aranges
+                0x00000020       0x20 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+ .debug_aranges
+                0x00000040       0x20 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+ .debug_aranges
+                0x00000060       0x30 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+ .debug_aranges
+                0x00000090       0x20 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_aranges
+                0x000000b0       0x88 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_aranges
+                0x00000138       0x28 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_aranges
+                0x00000160       0x40 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+ .debug_aranges
+                0x000001a0       0x28 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
+ .debug_aranges
+                0x000001c8      0x100 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_aranges
+                0x000002c8       0xf8 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_aranges
+                0x000003c0       0x90 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_aranges
+                0x00000450       0x58 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_aranges
+                0x000004a8       0x60 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_aranges
+                0x00000508       0x88 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_aranges
+                0x00000590      0x3d0 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_aranges
+                0x00000960      0x168 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_aranges
+                0x00000ac8       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+ .debug_aranges
+                0x00000ae8       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+ .debug_aranges
+                0x00000b08       0x68 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+ .debug_aranges
+                0x00000b70       0x28 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+ .debug_aranges
+                0x00000b98       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+ .debug_aranges
+                0x00000bb8       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+ .debug_aranges
+                0x00000bd8       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+
+.debug_rnglists
+                0x00000000      0x8f2
+ .debug_rnglists
+                0x00000000       0x13 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+ .debug_rnglists
+                0x00000013       0x13 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+ .debug_rnglists
+                0x00000026       0x14 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+ .debug_rnglists
+                0x0000003a       0x20 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+ .debug_rnglists
+                0x0000005a       0x13 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_rnglists
+                0x0000006d       0x61 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_rnglists
+                0x000000ce       0x1a CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_rnglists
+                0x000000e8       0x2d CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+ .debug_rnglists
+                0x00000115       0x19 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
+ .debug_rnglists
+                0x0000012e       0xbb CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_rnglists
+                0x000001e9       0xb5 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_rnglists
+                0x0000029e       0x6c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_rnglists
+                0x0000030a       0x3f CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_rnglists
+                0x00000349       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_rnglists
+                0x0000038d       0x75 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_rnglists
+                0x00000402      0x302 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_rnglists
+                0x00000704      0x11b CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_rnglists
+                0x0000081f       0x13 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+ .debug_rnglists
+                0x00000832       0x13 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+ .debug_rnglists
+                0x00000845       0x49 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+ .debug_rnglists
+                0x0000088e       0x2a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+ .debug_rnglists
+                0x000008b8       0x13 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+ .debug_rnglists
+                0x000008cb       0x13 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+ .debug_rnglists
+                0x000008de       0x14 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+
+.debug_line     0x00000000     0xc4b9
+ .debug_line    0x00000000      0x29b CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+ .debug_line    0x0000029b      0x21e CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+ .debug_line    0x000004b9      0x257 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+ .debug_line    0x00000710      0x43a CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00000b4a      0x1df CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x00000d29      0x3d0 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x000010f9      0x2a7 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_line    0x000013a0      0x5c8 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+ .debug_line    0x00001968       0x7a CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
+ .debug_line    0x000019e2      0x655 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_line    0x00002037      0x90a CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_line    0x00002941      0xefa CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_line    0x0000383b      0x772 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_line    0x00003fad      0x556 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_line    0x00004503      0xbdb CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_line    0x000050de     0x4b18 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_line    0x00009bf6     0x1db1 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_line    0x0000b9a7      0x17e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+ .debug_line    0x0000bb25      0x188 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+ .debug_line    0x0000bcad      0x19b C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+ .debug_line    0x0000be48      0x28a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+ .debug_line    0x0000c0d2      0x102 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+ .debug_line    0x0000c1d4      0x140 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+ .debug_line    0x0000c314      0x1a5 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+
+.debug_str      0x00000000     0x3eda
+ .debug_str     0x00000000      0x6b6 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+                                0x762 (size before relaxing)
+ .debug_str     0x000006b6      0x6b0 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+                                0x849 (size before relaxing)
+ .debug_str     0x00000d66       0xb4 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+                                0x3a9 (size before relaxing)
+ .debug_str     0x00000e1a      0x25c CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+                                0xa55 (size before relaxing)
+ .debug_str     0x00001076       0x40 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                                0x2ea (size before relaxing)
+ .debug_str     0x000010b6      0x17a CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                                0x83b (size before relaxing)
+ .debug_str     0x00001230       0x9b CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                                0x350 (size before relaxing)
+ .debug_str     0x000012cb      0x2e0 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+                               0x115a (size before relaxing)
+ .debug_str     0x000015ab       0x58 CMakeFiles/test2.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj
+                                 0x8d (size before relaxing)
+ .debug_str     0x00001603      0x39e CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                                0xc1b (size before relaxing)
+ .debug_str     0x000019a1      0x4d8 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                                0xcde (size before relaxing)
+ .debug_str     0x00001e79      0x301 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                                0x792 (size before relaxing)
+ .debug_str     0x0000217a      0x12b CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                                0x50f (size before relaxing)
+ .debug_str     0x000022a5      0x152 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+                                0x4fa (size before relaxing)
+ .debug_str     0x000023f7      0x1b8 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                                0x735 (size before relaxing)
+ .debug_str     0x000025af      0xdcd CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                               0x171b (size before relaxing)
+ .debug_str     0x0000337c      0x450 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                                0xf27 (size before relaxing)
+ .debug_str     0x000037cc      0x16a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+                                0x206 (size before relaxing)
+ .debug_str     0x00003936       0xb6 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+                                0x267 (size before relaxing)
+ .debug_str     0x000039ec      0x266 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+                                0x379 (size before relaxing)
+ .debug_str     0x00003c52      0x105 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+                                0x343 (size before relaxing)
+ .debug_str     0x00003d57       0x9e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+                                0x243 (size before relaxing)
+ .debug_str     0x00003df5       0x7a C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+                                0x23d (size before relaxing)
+ .debug_str     0x00003e6f       0x6b C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+                                0x31a (size before relaxing)
+
+.comment        0x00000000       0x43
+ .comment       0x00000000       0x43 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+                                 0x44 (size before relaxing)
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+ .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+ .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+ .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+ .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+ .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+ .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
+
+.debug_frame    0x00000000     0x1d28
+ .debug_frame   0x00000000       0x28 CMakeFiles/test2.elf.dir/Core/Src/callback.c.obj
+ .debug_frame   0x00000028       0x2c CMakeFiles/test2.elf.dir/Core/Src/dma.c.obj
+ .debug_frame   0x00000054       0x30 CMakeFiles/test2.elf.dir/Core/Src/gpio.c.obj
+ .debug_frame   0x00000084       0x58 CMakeFiles/test2.elf.dir/Core/Src/main.c.obj
+ .debug_frame   0x000000dc       0x28 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_frame   0x00000104      0x120 CMakeFiles/test2.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_frame   0x00000224       0x30 CMakeFiles/test2.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_frame   0x00000254       0xac CMakeFiles/test2.elf.dir/Core/Src/tim.c.obj
+ .debug_frame   0x00000300      0x20c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_frame   0x0000050c      0x214 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_frame   0x00000720      0x188 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_frame   0x000008a8       0xd4 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_frame   0x0000097c       0xec CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_frame   0x00000a68      0x16c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_frame   0x00000bd4      0xb08 CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_frame   0x000016dc      0x40c CMakeFiles/test2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_frame   0x00001ae8       0x2c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00001b14       0x34 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00001b48       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-memset.o)
+ .debug_frame   0x00001b68       0x2c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-init.o)
+ .debug_frame   0x00001b94       0xb0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-lock.o)
+ .debug_frame   0x00001c44       0x58 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__call_atexit.o)
+ .debug_frame   0x00001c9c       0x20 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-atexit.o)
+ .debug_frame   0x00001cbc       0x38 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-fini.o)
+ .debug_frame   0x00001cf4       0x34 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg.a(libc_a-__atexit.o)
 
 .debug_line_str
                 0x00000000       0x71
